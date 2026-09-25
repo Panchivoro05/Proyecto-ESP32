@@ -36,6 +36,11 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
+# backend (Flask/JWT)
+backend/.env
+backend/venv/
+backend/__pycache__/
+
 example
 
 # generated native folders
