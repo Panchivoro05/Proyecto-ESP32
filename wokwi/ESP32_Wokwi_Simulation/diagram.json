@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Rodrigo Villa",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 19.2, "left": -52.76, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 85.6,
+      "left": 164.6,
+      "rotate": 270,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -4.8,
+      "left": 220.25,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "led1:A", "r1:1", "green", [ "h0" ] ],
+    [ "r1:2", "esp:2", "green", [ "v-38.6", "h-144.3", "v249.6" ] ],
+    [ "led1:C", "esp:GND.1", "black", [ "v191.6", "h-336", "v-134.4" ] ]
+  ],
+  "dependencies": {}
+}
